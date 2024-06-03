@@ -13,6 +13,8 @@ btn.addEventListener("click",function CalculateAge(){
         }, 100);
     }, 0.2);
 
+    
+
      let birthDate =new Date(userInput.value);
 
      let d1 = birthDate.getDate();
@@ -47,8 +49,11 @@ btn.addEventListener("click",function CalculateAge(){
       }
       res.style.display ="block"
       result.style.display = "block"
+      if(userInput.value == ''){
+        result.innerHTML = 'please select any date'
+    }else{
       result.innerHTML = `You are <span> ${y3}</span> years <span> ${m3} </span> months <span> ${d3} </span> days old`
-      
+    }
 
       function getdaysInMonth(year , month  ){
              return new Date(year, month , 0).getDate();
