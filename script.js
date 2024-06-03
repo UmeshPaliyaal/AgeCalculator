@@ -5,6 +5,14 @@ let result = document.getElementById("result");
 let res = document.querySelector(".res");
 
 btn.addEventListener("click",function CalculateAge(){
+    const originalClss = btn.className
+    setTimeout(() => {
+        btn.className = "btnnn"
+        setTimeout(() => {
+            btn.className = originalClss
+        }, 100);
+    }, 0.2);
+
      let birthDate =new Date(userInput.value);
 
      let d1 = birthDate.getDate();
